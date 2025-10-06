@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/bounce.dir/src/bouncy.c.o -o build/bounce  /usr/lib/x86_64-linux-gnu/libSDL2.so 
