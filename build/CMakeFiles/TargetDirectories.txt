@@ -1,0 +1,3 @@
+/home/shark/Documentos/Programming/lang/C/Project/Bounce/build/CMakeFiles/bounce.dir
+/home/shark/Documentos/Programming/lang/C/Project/Bounce/build/CMakeFiles/edit_cache.dir
+/home/shark/Documentos/Programming/lang/C/Project/Bounce/build/CMakeFiles/rebuild_cache.dir
