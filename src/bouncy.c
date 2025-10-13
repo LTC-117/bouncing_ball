@@ -56,10 +56,10 @@ void FillCircle(SDL_Surface *surface, Circle circle, Uint32 color){
 
     double radius_squared = circle.radius * circle.radius;
 
-    for(double x=low_x; x < high_x; x++){
-        for(double y=low_y; y < high_y; y++){
+    for(double x = low_x; x < high_x; x++){
+        for(double y = low_y; y < high_y; y++){
             //Is coordinate within circle?
-            double center_distance = (x-circle.x)*(x-circle.x) + (y-circle.y)*(y-circle.y);
+            double center_distance = (x - circle.x)*(x - circle.x) + (y - circle.y)*(y - circle.y);
             if(center_distance < radius_squared){
                 SDL_Rect pixel = (SDL_Rect) {x,y,1,1};
                 SDL_FillRect(surface, &pixel, color);
@@ -70,7 +70,7 @@ void FillCircle(SDL_Surface *surface, Circle circle, Uint32 color){
 
 
 void FillTrajectory(SDL_Surface *surface, Circle trajectory[LENGTH], int current_trajectory_index){
-    for(int i=0; i<current_trajectory_index; i++){
+    for(int i = 0; i < current_trajectory_index; i++){
         trajectory[i].radius = i;
         FillCircle(surface, trajectory[i], g_colors[i]);
     }
@@ -81,11 +81,11 @@ void UpdateTrajectory(Circle trajectory[LENGTH], struct Circle circle, int curre
     if(current_index >= LENGTH){
         //shift array - write the circle at the end of the array
         Circle trajectory_copy[LENGTH];
-        for(int i=0; i<LENGTH; i++){
+        for(int i = 0; i < LENGTH; i++){
             if(i > 0 && i < LENGTH)
                 trajectory_copy[i] = trajectory[i+1];
         }
-        for(int i=0; i<LENGTH; i++){
+        for(int i = 0; i < LENGTH; i++){
             trajectory[i] = trajectory_copy[i];
         }
         trajectory[current_index] = circle;
